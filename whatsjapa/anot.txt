@@ -1,0 +1,3 @@
+parou no 12:39
+
+o index do pagination e o PaginationIntem.tsx
