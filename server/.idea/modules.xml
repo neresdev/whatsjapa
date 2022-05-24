@@ -3,7 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/../client/.idea/client.iml" filepath="$PROJECT_DIR$/../client/.idea/client.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../../dashgo-test/whatsjapa/.idea/dashgo.iml" filepath="$PROJECT_DIR$/../../dashgo-test/whatsjapa/.idea/dashgo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../whatsjapa/.idea/dashgo.iml" filepath="$PROJECT_DIR$/../whatsjapa/.idea/dashgo.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/server.iml" filepath="$PROJECT_DIR$/.idea/server.iml" />
     </modules>
   </component>

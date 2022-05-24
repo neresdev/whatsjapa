@@ -8,7 +8,7 @@ export function Logo(){
       letterSpacing="tight"
       w="64"
     >
-      <Text as={'span'} color={'cyan'}>W</Text>hats<Text as={'span'} color={'cyan'}>J</Text>apa
+      <Text as={'span'} color={'green'}>W</Text>hats<Text as={'span'} color={'green'}>J</Text>apa
     <Text color="cyan" as="span" ml="1">.</Text>
   </Text>
   )

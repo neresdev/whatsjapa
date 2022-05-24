@@ -1,17 +1,17 @@
 /**
  versão: 0.0.2
  ações:
-    - iniciando a configuração do websocket
-    - criação dos componentes Join e ChatComponent
-    - paramos em 38:21
+ - iniciando a configuração do websocket
+ - criação dos componentes Join e ChatComponent
+ - paramos em 38:21
 
  --------------------------------------------
-  versão: 0.0.1
-  ação: iniciando app
-  TODO's: mudar futuramente o cors origin
-          pois vamos fazer deste pc um SERVIDOR
+ versão: 0.0.1
+ ação: iniciando app
+ TODO's: mudar futuramente o cors origin
+ pois vamos fazer deste pc um SERVIDOR
 
-**/
+ **/
 
 const fs = require("fs");
 var options = {
@@ -28,14 +28,17 @@ const app = require('https').createServer(options);
 const PORT = 3001;
 const cors = require('cors');
 const io = require('socket.io')(app, {
-    cors: {
-      origin: '*'
-    },
-    secure: true
-  }
+        cors: {
+            origin: '*'
+        },
+        secure: true
+    }
 )
 
 // app.use(cors());
+io.on('closed', data => {
+    console.log('alguem saiu');
+})
 io.on('connect', (socket) =>{
 
     socket.on('userConnected', name => {
@@ -61,10 +64,10 @@ io.on('connect', (socket) =>{
         io.to(data.to).emit("callAccepted", data.signal)
     })
     //--> tests
-
 } )
 
-app.listen(PORT,'172.16.116.187' , () =>{
+app.listen(PORT,'192.168.0.14' , () =>{
     console.log('ENV_IP')
     console.log(`rodando na porta ${PORT}`)
 })
+

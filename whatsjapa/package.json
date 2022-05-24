@@ -19,6 +19,7 @@
     "@material-ui/icons": "^4.11.3",
     "@supabase/supabase-js": "^1.35.2",
     "@types/js-cookie": "^3.0.2",
+    "@types/websocket": "^1.0.5",
     "apexcharts": "^3.29.0",
     "codemirror": "^5.65.3",
     "crypto-hash": "^2.0.1",
@@ -40,7 +41,8 @@
     "react-icons": "^4.3.1",
     "react-toastify": "^9.0.1",
     "simple-peer": "^9.11.1",
-    "socket.io-client": "^4.5.0",
+    "socket.io-client": "^4.4.0",
+    "websocket": "^1.0.34",
     "yup": "^0.32.11"
   },
   "devDependencies": {

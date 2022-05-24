@@ -30,6 +30,6 @@ app.prepare().then(() => {
         }
     }).listen(port, (err) => {
         if (err) throw err
-        console.log(`> Ready on https://172.16.116.187:${port}`)
+        console.log(`> Ready on https://192.168.0.14:${port}`)
     })
 })

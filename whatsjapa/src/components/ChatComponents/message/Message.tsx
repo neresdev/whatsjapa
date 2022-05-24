@@ -25,7 +25,7 @@ export default function Message({text, author, bot}:MessageProps){
 					<Text
                         fontWeight={"600"}
                         margin={"5px 5px 5px 0px"}
-                        color={"cyan"}
+                        color={"green"}
 
                     >{author}:  </Text>
 					<Text

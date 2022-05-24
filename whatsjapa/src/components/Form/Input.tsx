@@ -21,13 +21,13 @@ export function Input({name, label, type, ...rest}: InputProps){
                     name={name}
                     id={name}
                     type={type === 'password' ? returnType(visible) : type }
-                    focusBorderColor="cyan.300"
+                    focusBorderColor="green"
                     bgColor="gray.900"
                     variant="flushed"
                     _hover={{
                         bgColor: 'gray.900'
                     }}
-                    borderColor='cyan.300'
+                    borderColor='green'
                     size="lg"
                     {...rest}
                 />

@@ -29,6 +29,12 @@ export function ChatComponent({socket, name}: ChatComponent){
     const [erro, setErro] = useState("");
     useEffect(() => {
         setLogged(Cookies.get('actualUser') !== undefined);
+        // document.addEventListener('keypress', function (e){
+        //     if (e.code == 'Enter'){
+        //         console.log(e.code);
+        //         sendMessage();
+        //     }
+        // })
     }, [])
     useEffect(() => {
         socket.on("receiveMessage", (data) => {
@@ -39,7 +45,13 @@ export function ChatComponent({socket, name}: ChatComponent){
 
     const sendMessage = () => {
         if (message.trim() === "") return;
-        socket.emit("message", { userId: socket.id, name: name, message });
+        try{
+
+            socket.emit("message", { userId: socket.id, name: name, message });
+            console.log('tentei enviar')
+        }catch (e){
+            console.log('erro na hora de enviar msg: ' + e.message);
+        }
         setMessage("");
     };
     // const clearInput = () => {
@@ -56,7 +68,7 @@ export function ChatComponent({socket, name}: ChatComponent){
                 <Sidebar />
                 <Box flex="1" borderRadius={8} bg="gray.800" p="8">
                     <Flex mb="8" justify="space-between" alig="center">
-                        <Heading size="lg"  fontWeight="normal"> Chat: socket =  <p>{socket.connected}</p>  </Heading>
+                        <Heading size="lg"  fontWeight="normal"> Chat:  </Heading>
                     </Flex>
                     {/*inicia aqui*/}
                     <Box className="chat-container"

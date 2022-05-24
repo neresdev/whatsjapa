@@ -1,6 +1,7 @@
 import { NavLink } from './NavLink';
 import { RiDashboardLine, RiContactsLine, RiInputMethodLine, RiGitMergeLine } from 'react-icons/ri';
 import { AiFillMessage } from 'react-icons/ai';
+import { BsFillTelephoneFill  } from 'react-icons/bs';
 import { VscError } from 'react-icons/vsc';
 import { NavSection } from './NavSection';
 import { Stack } from '@chakra-ui/react';
@@ -21,15 +22,15 @@ export function SidebarNav(){
               <>
 
               <NavLink icon={RiDashboardLine} href="/dashboard">DashBoard</NavLink>
-              <NavLink icon={RiContactsLine} href="/users">Usuários</NavLink>
+              {/*<NavLink icon={RiContactsLine} href="/users">Usuários</NavLink>*/}
               <NavLink icon={AiFillMessage} href="/chat">Chat</NavLink>
-              <NavLink icon={AiFillMessage} href="/call">Ligação</NavLink>
+              <NavLink icon={BsFillTelephoneFill} href="/call">Ligação</NavLink>
               </> :
               <NavLink
                   icon={VscError}
                   _hover={{
-                    bgColor: 'gray.900',
-                      color: 'cyan'
+                    bgColor: 'green',
+                      color: 'green'
                    }}
                   href="/"
               >
